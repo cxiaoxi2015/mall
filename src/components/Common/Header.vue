@@ -29,11 +29,9 @@
           <div class="login-group">
             <div class="isLogin" v-show="isLogin">
               <a>欢迎您:Admin</a>
-              <span class="mall-line"></span>
             </div>
             <div class="login" v-show="!isLogin">
               <a>登录/注册</a>
-              <span class="mall-line"></span>
             </div>
           </div>
         </div>
@@ -58,6 +56,7 @@
 		height:80px;
 		line-height:80px;
 		background:#FFF;
+    overflow:hidden;
 	}
 	.el-row,.el-col{height:100%;}
 	.logo{
@@ -88,7 +87,10 @@
     -o-transform: translate(0, 2px);
     transform: translate(0, 2px);
 	}
-  .toolsBar{position:relative;}
+  .toolsBar{
+    height:100%;
+    position:relative;
+  }
   .icon-bar li{
     float:left;
     line-height:80px;
@@ -133,24 +135,33 @@
     margin-left:30px;
     width:100px;
     text-align:center;
-    position:relative;
     overflow:hidden;
+    height:35px;
+    line-height:30px;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 0.5px;
+    font-weight:600;
+    transform: translate(0, 3px);
   }
-  .mall-line{
-    position:absolute;
-    left:10%;
-    bottom:15px;
-    width:80%;
-    height:3px;
-    background-color:#D7B251;
-    display:none;
+  .login a:after,
+  .isLogin a:after{
+    width:0;
+    height:4px;
+    background:#D2A637;
+    content:'';
+    display: block;
+    margin:0 auto;
+  }
+  .login:hover a:after,
+  .isLogin:hover a:after{
+    width:100%;
+    transition:.5s;
   }
   .login:hover{
     cursor:pointer;
-  }
-  .login:hover .mall-line{
-    display:inline-block;
-    transition:all 0.5s;
   }
   .login-group{
     width:200px;
@@ -158,9 +169,8 @@
     line-height:80px;
     float:right;
     margin-right:95px;
-  }
-  .login-group a{
-    position:relative;
-    top:3px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
