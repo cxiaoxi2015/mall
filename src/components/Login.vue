@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<mall-header></mall-header>
 		我是登录页
 	</div>
 </template>
@@ -10,7 +9,7 @@
 	export default{
 	  data(){
 	    return{
-			
+
 	    }
 	  },
 	  components:{
@@ -20,5 +19,5 @@
 </script>
 
 <style>
-	
+
 </style>

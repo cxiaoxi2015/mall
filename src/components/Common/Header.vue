@@ -31,7 +31,7 @@
               <a>欢迎您:Admin</a>
             </div>
             <div class="login" v-show="!isLogin">
-              <a>登录/注册</a>
+              <router-link to="/Login">登录/注册</router-link>
             </div>
           </div>
         </div>
